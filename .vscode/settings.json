@@ -1,0 +1,42 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "vue.codeActions.enabled": true,
+  "vue.codeLens.enabled": true,
+  "vue.splitEditors.icon": true,
+  "eslint.useFlatConfig": true,
+  "eslint.enable": true,
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "eslint.debug": true,
+  "eslint.format.enable": true,
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#f546d3",
+    "activityBar.background": "#f546d3",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#c5f20d",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#f546d3",
+    "statusBar.background": "#f216c7",
+    "statusBar.debuggingBackground": "#16f241",
+    "statusBar.debuggingForeground": "#15202b",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#f546d3",
+    "statusBarItem.remoteBackground": "#f216c7",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#f216c7",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#f216c799",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#f216c7",
+}
