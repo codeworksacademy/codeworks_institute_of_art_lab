@@ -15,8 +15,9 @@ const admirerTitle = computed(() => {
 
 <template>
   <div class="position-relative">
-    <img :src="artwork.smallImg" :alt="artwork.altDescription" class="shadow">
-    <div class="admirer-icon text-center" :title="admirerTitle">
+    <img :src="artwork.smallImg" :alt="artwork.altDescription" :height="artwork.height" :width="artwork.width"
+      class="shadow">
+    <div class="admirer-icon text-center no-print" :title="admirerTitle">
       <i class="mdi mdi-hand-clap d-block"></i>
       <span>{{ artwork.admirers.length }}</span>
     </div>
@@ -27,14 +28,15 @@ const admirerTitle = computed(() => {
 <style lang="scss" scoped>
 img {
   width: 100%;
+  height: auto;
 }
 
 .admirer-icon {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 1rem;
-  height: 50px;
+  margin: .5rem;
+  height: 3rem;
   aspect-ratio: 1/1;
   background-color: var(--bs-light);
   border-radius: 50%;

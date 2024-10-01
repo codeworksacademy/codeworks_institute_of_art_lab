@@ -23,16 +23,17 @@ async function getArtworks() {
 </script>
 
 <template>
-  <h1>Codeworks Institute of Art</h1>
-  <section class="artwork">
-    <ArtworkCard v-for="art in artworks" :key="art.id" :artwork="art" />
-  </section>
+  <div class="art-view">
+    <h1>Codeworks Institute of Art <i v-if="artworks.length == 0" class="mdi mdi-loading mdi-spin"></i></h1>
+    <section class="artwork py-3">
+      <ArtworkCard v-for="art in artworks" :key="art.id" :artwork="art" />
+    </section>
+  </div>
 </template>
 
 <style scoped lang="scss">
 .artwork {
   columns: 300px;
-  column-gap: 1rem;
 }
 
 .artwork>* {
