@@ -1,6 +1,7 @@
 @import "./_variables.scss";
 @import "./_utilities.scss";
 @import "./loaders.scss";
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
 
 body {
   overscroll-behavior: none;
@@ -21,3 +22,8 @@ a {
   text-decoration: none;
 }
 
+* {
+  font-family: "Abyssinica SIL", serif;
+  font-weight: 400;
+  font-style: normal;
+}
