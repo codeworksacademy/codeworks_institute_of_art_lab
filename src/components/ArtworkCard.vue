@@ -22,7 +22,7 @@ function setActiveArtwork() {
   <div @click="setActiveArtwork()" class="position-relative" data-bs-toggle="modal" data-bs-target="#artworkModal">
     <img :src="artwork.smallImg" :alt="artwork.altDescription" :height="artwork.height" :width="artwork.width"
       class="shadow">
-    <div class="admirer-icon text-center no-print" :title="admirerTitle">
+    <div v-if="artwork.admirers.length" class="admirer-icon text-center no-print" :title="admirerTitle">
       <i class="mdi mdi-hand-clap d-block"></i>
       <span>{{ artwork.admirers.length }}</span>
     </div>

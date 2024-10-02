@@ -41,14 +41,15 @@ async function toggleAdmiration() {
                         <i class="mdi mdi-hand-clap"></i>
                       </div>
                       <img v-for="admirer in artwork.admirers" :key="admirer.id" :src="admirer.picture"
-                        :alt="'A picture of ' + admirer.name" :title="admirer.name" class="circle">
+                        :alt="`${admirer.name}'s profile picture`" :title="admirer.name"
+                        class="circle object-fit-cover">
                     </div>
                     <p class="mb-0 mt-1 text-end">{{ artwork.attribution }}</p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 p-0">
-                <div class="text-center position-relative">
+                <div class="text-center">
                   <a :href="artwork.unsplashLink" target="_blank" title="View this work on Unsplash">
                     <img :src="artwork.regularImg" :alt="artwork.altDescription" class="artwork-img">
                   </a>
