@@ -25,11 +25,11 @@ async function changePage(pageNumber) {
     <div class="text-center">
       <i class="mdi mdi-book-open-blank-variant-outline display-1 display-block"></i>
       <p>{{ currentPage }} of {{ totalPages }}</p>
-      <button @click="changePage(currentPage + 1)" :disabled="currentPage == totalPages"
+      <button @click="changePage(currentPage + 1)" :disabled="currentPage == totalPages" type="button"
         class="btn btn-outline-dark d-block mb-3 w-100 rounded-pill">
         next
       </button>
-      <button @click="changePage(currentPage - 1)" :disabled="currentPage < 2"
+      <button @click="changePage(currentPage - 1)" :disabled="currentPage < 2" type="button"
         class="btn btn-outline-dark d-block w-100 rounded-pill">
         previous
       </button>

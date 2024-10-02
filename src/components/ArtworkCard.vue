@@ -1,5 +1,6 @@
 <script setup>
 import { Artwork } from '@/models/Artwork.js';
+import { artworksService } from '@/services/ArtworksService.js';
 import { computed } from 'vue';
 
 const props = defineProps({
@@ -9,12 +10,16 @@ const props = defineProps({
 const admirerTitle = computed(() => {
   const admirerCount = props.artwork.admirers.length
   return `This work has been admired by ${admirerCount} ${admirerCount == 1 ? 'person' : 'people'}.`
-}) 
+})
+
+function setActiveArtwork() {
+  artworksService.setActiveArtwork(props.artwork)
+}
 </script>
 
 
 <template>
-  <div class="position-relative">
+  <div @click="setActiveArtwork()" class="position-relative" data-bs-toggle="modal" data-bs-target="#artworkModal">
     <img :src="artwork.smallImg" :alt="artwork.altDescription" :height="artwork.height" :width="artwork.width"
       class="shadow">
     <div class="admirer-icon text-center no-print" :title="admirerTitle">

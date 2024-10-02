@@ -1,6 +1,7 @@
 <script setup>
 import { AppState } from '@/AppState.js';
 import ArtworkCard from '@/components/ArtworkCard.vue';
+import ArtworkModal from '@/components/ArtworkModal.vue';
 import PageNavigation from '@/components/PageNavigation.vue';
 import { artworksService } from '@/services/ArtworksService.js';
 import { logger } from '@/utils/Logger.js';
@@ -24,13 +25,15 @@ async function getArtworks() {
 </script>
 
 <template>
-  <div class="art-view">
+  <div>
     <h1>Codeworks Institute of Art <i v-if="artworks.length == 0" class="mdi mdi-loading mdi-spin"></i></h1>
     <PageNavigation class="d-block d-md-none" />
     <section class="artwork py-3">
       <ArtworkCard v-for="art in artworks" :key="art.id" :artwork="art" />
     </section>
   </div>
+
+  <ArtworkModal />
 </template>
 
 <style scoped lang="scss">
